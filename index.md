@@ -13,6 +13,7 @@ see example at [here](/example.html)
 1.  Download Source code from github.
 2.  copy `shwelator.js` and `shwelatorDictionary.js` to your destinated folder
 3.  add both `shwelator.js` and `shwelatorDictionary.js` to your html file.
+4.  (IMPORTANT!) edit the dictionary on `shwelatorDictionary.ssjs` based on your own need !
 
 ### Limitation (IMPORANT!!)
 
