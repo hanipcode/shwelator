@@ -1,6 +1,8 @@
 ## Welcome to Shwelator GitHub Pages
 
-## Dadar
+### Example
+
+see example at [here](/example.html)
 
 ### How to Install
 
