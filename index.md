@@ -84,3 +84,70 @@ Translate every word inside an element using words defined in `shwelatorTranslat
 
 Support ? just look through the code, I think it's not that messy.
 Contact ? Don't ever think about contacting me, unless you are same office with me.
+
+### Example HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jquery Shwelator Example</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <style>
+    .red {
+      color: red;
+    }
+    </style>
+</head>
+
+<body>
+  <h1 class="translated">This is per word Translated Title</h1>
+  <p class="translated">This is per word Translated Paragraph</p>
+  <p>You <span class="translated">can even translate</span> a part of paragraph</p>
+  <p class="translate-class red home">You can have a full even different (not litarate) translation too ! by using
+    translate-all classname followed by a class name</p>
+  <!-- Please use camel case and avoid using hypen ! -->
+  <p class="translate-class anotherParagraph">This is another translated paragraph but using class translation feature</p>
+  <p class="translate-class">This paragraph will provide error because only one class is defined, see your console
+    (F12) for more
+    info !</p>
+
+  <ul>
+    <li>Languages: </li>
+    <ul>
+      <li><a href="?lang=en">English</a></li>
+      <li><a href="?lang=id">Indonesian</a></li>
+      <li><a href="/example.html">Default (Indonesian)</a></li>
+    </ul>
+    <li>
+      <p>HTML Source Code is written in english, see source for more detail</p>
+    </li>
+    <li>
+      <p>Don't Forget to follow me on github at <a href="https://github.com/hanipcode">@hanipcode</a></p>
+    </li>
+    <li>
+      <p>You might think I am some geeky-bearded-man who don't know about writting aesthetic frontend. but well this is
+        just an example man, to see my real work you can visit my Linkedin <a href="https://linkedin.com/in/hanifeij">@hanifeij</a></p>
+    </li>
+  </ul>
+
+</body>
+
+<script src="./shwelatorDictionary.js" type="text/javascript"></script>
+<script src="./shwelator.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    var withHypen = true;
+    shwelatorTranslateByWord("translated");
+    shwelatorTranslateByClass("translate-class")
+  })
+</script>
+
+</html>
+```
