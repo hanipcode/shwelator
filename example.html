@@ -5,11 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Jquery Shwelator Example</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <style>
+    .red {
+      color: red;
+    }
+    </style>
 </head>
 
 <body>
-  <h1>This is </h1>
+  <h1 class="translated">This is per word Translated Title</h1>
+  <p class="translated">This is per word Translated Paragraph</p>
+  <p>You <span class="translated">can even translate</span> a part of paragraph</p>
+  <p class="translate-class red home">You can have a full even different (not litarate) translation too ! by using
+    translate-all classname followed by a class name</p>
+  <!-- Please use camel case and avoid using hypen ! -->
+  <p class="translate-class anotherParagraph">This is another translated paragraph but using class translation feature</p>
+  <p class="translate-class">This will provide error because only one class is defined, see your console (F12) for more
+    info !</p>
+
+  <ul>
+    <li><a href="?lang=en">English</a></li>
+    <li><a href="?lang=id">Indonesian</a></li>
+    <li><a href="/example.html">Default</a></li>
+
+  </ul>
+
 </body>
+
+<script src="./shwelatorDictionary.js" type="text/javascript"></script>
+<script src="./shwelator.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    var withHypen = true;
+    shwelatorTranslateByWord("translated");
+    shwelatorTranslateByClass("translate-class")
+  })
+</script>
 
 </html>
